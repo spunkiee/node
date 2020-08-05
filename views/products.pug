@@ -1,0 +1,14 @@
+extends layouts/main-layout.pug
+
+block content
+    main 
+        ul
+            if products.length
+                each product in products
+                    li  
+                        h4 #{product.title}
+                        p #{product.description}
+                        span Rs. #{product.price}
+                        button(type="button") Add Product
+            else
+                h3 No Products
